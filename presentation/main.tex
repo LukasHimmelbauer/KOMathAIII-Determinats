@@ -1,0 +1,116 @@
+\documentclass[usenames,dvipsnames]{beamer}
+%----------------------------------------------------------------------------------------
+%	Determinants presentation
+%   20.04.2020
+%----------------------------------------------------------------------------------------
+\usetheme{focus}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Farbdefinitionen
+\definecolor{backgroundcoloreq}{RGB}{180,140,0}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{codeorange}{RGB}{190,100,0}
+
+
+\lstset{
+    language=python,
+    basicstyle=\ttfamily,
+    numbers=left,
+    numberstyle=\tiny,
+    tabsize=4,
+    columns=fixed,
+    showstringspaces=false,
+    showtabs=false,
+    breaklines=true,
+    keepspaces,
+    morekeywords={std},
+    keywordstyle=\color{blue}\ttfamily,
+    stringstyle=\color{red}\ttfamily,
+    commentstyle=\color{OliveGreen!85}\ttfamily,
+    numberstyle=\tiny\color{codegray},
+    basicstyle=\footnotesize\selectfont\ttfamily,
+    % keyword highlighting
+    classoffset=1, % starting new class
+    otherkeywords={>,<,.,;,-,+,!,=,~,:,[,],NULL,&},
+    morekeywords={>,<,.,;,-,+,!,=,~,:,[,],NULL,&},
+    keywordstyle=\color{codeorange},
+    classoffset=0
+}
+
+%----------------------------------------------------------------------------------------
+%	 TITLE SLIDE
+%----------------------------------------------------------------------------------------
+
+\title{Determinants}
+
+\subtitle{for a given Matrix $A \in \mathbb{R}^{n \cdot n}$}
+
+\author{Lukas Heiligenbrunner, Simon Keller, Lukas Himmelbauer, Christoph Wittner}
+
+\date{\today}
+
+%------------------------------------------------
+
+\begin{document}
+
+%------------------------------------------------
+
+    \begin{frame}
+        \maketitle
+    \end{frame}
+
+%----------------------------------------------------------------------------------------
+%	 SECTION 2
+%----------------------------------------------------------------------------------------
+
+
+    \section{Lagrange-Expansion} % Section title slide, unnumbered
+
+%------------------------------------------------
+
+    \begin{frame}{Lagrange-Expansion}
+        todo implement
+    \end{frame}
+
+%----------------------------------------------------------------------------------------
+%	 SECTION 2
+%----------------------------------------------------------------------------------------
+
+
+    \section{Gaussian elemination} % Section title slide, unnumbered
+
+%------------------------------------------------
+
+    \begin{frame}{Gaussian elemination}
+        todo
+    \end{frame}
+
+%------------------------------------------------
+
+    \begin{frame}[focus]
+        Thank you for your attention!
+    \end{frame}
+
+%----------------------------------------------------------------------------------------
+%	 CLOSING/SUPPLEMENTARY SLIDES
+%----------------------------------------------------------------------------------------
+
+    \appendix
+
+    \begin{frame}{Sources}
+        \nocite{*} % Display all references regardless of if they were cited
+        \bibliography{sources}
+        \bibliographystyle{plain}
+    \end{frame}
+
+\end{document}
