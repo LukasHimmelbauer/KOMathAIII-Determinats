@@ -1,0 +1,41 @@
+import itertools
+import numpy as np
+
+
+# function to determine if a permutation is even or odd
+def parity_even(perm):
+    perm = list(perm)
+    swaps = 0
+    # iterate through all positions of the permutation and swap two entries if the left one is smaller than the right one
+    for i in range(len(perm)-1):
+        for j in range(i+1, len(perm)):
+            if perm[i] > perm[j]:
+                perm[i], perm[j] = perm[j], perm[i]
+                swaps += 1
+    # return True if the number of swaps is even and False otherwise
+    if swaps % 2 == 0:
+        return True
+    else:
+        return False
+
+
+def leibniz_formula(mat: np.array):
+    # get the size of the matrix
+    n = mat.shape[0]
+    # get a list of all permutations for the given size
+    permutations = list(itertools.permutations(elem for elem in range(n)))
+    determinant = 0
+    multiplication = 1
+    # iterate through all permutations in the list
+    for permutation in permutations:
+        # multiply all elements corresponding to the given permutation
+        for i in range(n):
+            multiplication *= mat[permutation[i], i]
+        # check if the parity of the permutations is even or odd, if even add value to determinant, subtract if otherwise
+        if parity_even(permutation):
+            determinant += multiplication
+        else:
+            determinant -= multiplication
+        # reset value of multiplication
+        multiplication = 1
+    return determinant
